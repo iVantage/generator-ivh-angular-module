@@ -1,0 +1,15 @@
+{
+  "name": "<%= registryName %>",
+  "version": "0.0.1",
+  "main": [
+    "dist/<%= fileNs %>.js"<% if(hasStyles) { %>,
+    "dist/<%= fileNs %>.css"<% } %>
+  ],
+  "dependencies": {
+    "angular": "^1.2"
+  },
+  "devDependencies": {
+    <% if(hasStyles) { %>"jquery": "~2.1.4",
+    <% } %>"angular-mocks": "^1.2"
+  }
+}
