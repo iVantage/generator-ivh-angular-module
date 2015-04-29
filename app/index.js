@@ -20,6 +20,12 @@ var providerNs = function(moduleName) {
   var ns = moduleName
     .split('.')
     .map(function(part) {
+      return part.trim();
+    })
+    .filter(function(part) {
+      return part.length;
+    })
+    .map(function(part) {
       return part[0].toUpperCase() + part.substr(1);
     })
     .join('');
