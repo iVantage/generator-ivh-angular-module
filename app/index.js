@@ -65,6 +65,14 @@ module.exports = yeoman.generators.Base.extend({
       message: 'What would you like to name your module?',
       default: modulify(path.basename(process.cwd()))
     },{
+      name: 'description',
+      message: 'How would you describe your module?',
+      default: 'Fixing the world, one curly brace at a time.'
+    },{
+      name: 'ghName',
+      message: 'What is your name on GitHub?',
+      default: 'iVantage'
+    },{
       type: 'confirm',
       name: 'hasStyles',
       message: 'Does your module need stylesheets?',
@@ -107,6 +115,7 @@ module.exports = yeoman.generators.Base.extend({
       copy.bind(this)('jshintrc', '.jshintrc');
       copy.bind(this)('test/spec/jshintrc', 'test/spec/.jshintrc');
       copy.bind(this)('jscsrc', '.jscsrc');
+      copy.bind(this)('travis.yml', '.travis.yml');
       copyTpl.bind(this)('README.md');
       copyTpl.bind(this)('LICENSE-MIT');
       copyTpl.bind(this)('_gruntfile.js', 'gruntfile.js');
