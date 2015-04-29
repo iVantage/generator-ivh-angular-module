@@ -13,7 +13,12 @@ module.exports = function(grunt) {
       },
       gruntfile: 'gruntfile.js',
       src: 'src/**/*.js',
-      test: 'test/**/*.js'
+      spec: {
+        options: {
+          jshintrc: 'test/spec/.jshintrc'
+        },
+        src: 'test/spec/**/*.js'
+      }
     },
 
     clean: {
@@ -38,7 +43,7 @@ module.exports = function(grunt) {
     <% if(hasStyles) { %>less: {
       dist: {
         files: {
-          'dist/<%= fileNs %>.css': 'src/styles/<%= fileNs %>.less'
+          'dist/<%= fileNs %>.css': 'src/styles/**/*.less'
         }
       }
     },

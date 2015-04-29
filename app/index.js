@@ -109,6 +109,7 @@ module.exports = yeoman.generators.Base.extend({
       copy.bind(this)('jscsrc', '.jscsrc');
       copyTpl.bind(this)('README.md');
       copyTpl.bind(this)('LICENSE-MIT');
+      copyTpl.bind(this)('_gruntfile.js', 'gruntfile.js');
     }
   },
 
