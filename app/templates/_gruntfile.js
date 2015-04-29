@@ -21,6 +21,33 @@ module.exports = function(grunt) {
       }
     },
 
+    jscs: {
+      options: {
+        config: '.jscsrc'
+      },
+      gruntfile: {
+        files: {
+          src: [
+            'Gruntfile.js'
+          ]
+        }
+      },
+      spec: {
+        files: {
+          src: [
+            'test/spec/**/*.js'
+          ]
+        }
+      },
+      scripts: {
+        files: {
+          src: [
+            'src/scripts/**/*.js'
+          ]
+        }
+      }
+    },
+
     clean: {
       dist: 'dist'
     },
@@ -100,6 +127,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', [
     'jshint',
+    'jscs',
     'jasmine'
   ]);
 
