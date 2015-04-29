@@ -1,45 +1,72 @@
 # generator-ivh-angular-module [![Build Status](https://secure.travis-ci.org/jtrussell/generator-ivh-angular-module.png?branch=master)](https://travis-ci.org/jtrussell/generator-ivh-angular-module)
 
-> [Yeoman](http://yeoman.io) generator
+> A [Yeoman](http://yeoman.io) generator for AngularJS modules.
 
 
 ## Getting Started
 
-### What is Yeoman?
+What's Yeoman you say? Check out [their page](http://yeoman.io/). We'll wait
+here.
 
-Trick question. It's not a thing. It's this guy:
 
-![](http://i.imgur.com/JHaAlBJ.png)
+## About
 
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
+There are a handful of generators out there for scaffolding out AngularJS apps.
+This is not one of those. Here we're concerned with building small and focused
+modules. I.e. the stuff that lives in your `bower_components` folder.
 
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
 
-```bash
-npm install -g yo
+### Layout
+
+At a high level the final structure looks like this:
+
+```
+.
++-- src
+|   +-- scripts
+|   |   +-- services
+|   |   |   +-- *-foo.js
+|   |   +-- module.js
+|   +-- styles (optional)
+|   |   +-- main.less
++-- test
+|   +-- spec
+|   |   +-- services
+|   |   |   +-- *-foo.js
+|   |   .jshintrc
++-- .editorconfig
++-- .gitignore
++-- .jscsrc
++-- .jshintrc
++-- .travis.yml
++-- gruntfile.js
++-- LICENSE-MIT
++-- package.json
++-- README.md
 ```
 
-### Yeoman Generators
+The resulting `gruntfile.js` has tasks for building, linting, jscs-ing,
+less-ifying + cssmin-ifying (if you choose to include styles), and watching
+everything to do what it needs automatically.
 
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-ivh-angular-module from npm, run:
+### Installation and Usage
 
-```bash
+This generator lives under the name `generator-ivh-angular-module`:
+
+```
 npm install -g generator-ivh-angular-module
 ```
 
-Finally, initiate the generator:
+Once you have it you can just run the following to get started:
 
-```bash
-yo ivh.angular-module
+```
+yo ivh-angular-module
 ```
 
-### Getting To Know Yeoman
-
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
-
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+Then follow the prompts. The generator will place files directly
+into the directory it was invoked from, it will also make guesses at things like
+your module's name based on the name of that directory.
 
 
 ## License
