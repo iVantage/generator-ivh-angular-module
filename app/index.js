@@ -77,6 +77,11 @@ module.exports = yeoman.generators.Base.extend({
       name: 'hasStyles',
       message: 'Does your module need stylesheets?',
       default: false
+    },{
+      type: 'confirm',
+      name: 'doInstall',
+      message: 'Shall I install dependencies (node + bower) for you?',
+      default: false
     }];
 
     this.prompt(prompts, function (props) {
@@ -116,6 +121,7 @@ module.exports = yeoman.generators.Base.extend({
       copy.bind(this)('test/spec/jshintrc', 'test/spec/.jshintrc');
       copy.bind(this)('jscsrc', '.jscsrc');
       copy.bind(this)('travis.yml', '.travis.yml');
+      copy.bind(this)('CONTRIBUTING.md');
       copyTpl.bind(this)('README.md');
       copyTpl.bind(this)('LICENSE-MIT');
       copyTpl.bind(this)('_gruntfile.js', 'gruntfile.js');
@@ -123,6 +129,8 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
-    //this.installDependencies();
+    if(this.props.doInstall) {
+      this.installDependencies();
+    }
   }
 });
