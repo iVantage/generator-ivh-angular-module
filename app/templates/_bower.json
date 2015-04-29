@@ -1,9 +1,17 @@
 {
   "name": "<%= registryName %>",
   "version": "0.0.1",
+  "homepage": "https://github.com/<%= ghName %>/<%= registryName %>",
+  "license": "MIT",
   "main": [
     "dist/<%= fileNs %>.js"<% if(hasStyles) { %>,
     "dist/<%= fileNs %>.css"<% } %>
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
   ],
   "dependencies": {
     "angular": "^1.2"

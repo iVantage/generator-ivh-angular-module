@@ -4,6 +4,16 @@
   "scripts": {
     "test": "grunt test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= ghName %>/<%= registryName %>.git"
+  },
+  "author": "<%= ghName %>",
+  "bugs": {
+    "url": "https://github.com/<%= ghName %>/<%= registryName %>/issues"
+  },
+  "homepage": "https://github.com/<%= ghName %>/<%= registryName %>",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
