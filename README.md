@@ -1,4 +1,4 @@
-# generator-ivh-angular-module [![Build Status](https://secure.travis-ci.org/jtrussell/generator-ivh-angular-module.png?branch=master)](https://travis-ci.org/jtrussell/generator-ivh-angular-module)
+# generator-ivh-angular-module [![Build Status](https://secure.travis-ci.org/iVantage/generator-ivh-angular-module.png?branch=master)](https://travis-ci.org/iVantage/generator-ivh-angular-module)
 
 > A [Yeoman](http://yeoman.io) generator for AngularJS modules.
 
