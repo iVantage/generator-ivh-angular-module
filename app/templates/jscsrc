@@ -9,20 +9,20 @@
     "catch"
   ],
   "requireOperatorBeforeLineBreak": [
-      "?",
-      "=",
-      "+",
-      "-",
-      "/",
-      "*",
-      "==",
-      "===",
-      "!=",
-      "!==",
-      ">",
-      ">=",
-      "<",
-      "<="
+    "?",
+    "=",
+    "+",
+    "-",
+    "/",
+    "*",
+    "==",
+    "===",
+    "!=",
+    "!==",
+    ">",
+    ">=",
+    "<",
+    "<="
   ],
   "requireCamelCaseOrUpperCaseIdentifiers": true,
   "validateQuoteMarks": "'",
@@ -86,4 +86,3 @@
   "disallowSpacesInsideParentheses": true,
   "disallowNewlineBeforeBlockStatements": true
 }
-
