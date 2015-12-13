@@ -3,7 +3,7 @@
 
 [![Build Status](https://secure.travis-ci.org/<%= ghName %>/<%= registryName %>.png?branch=master)](https://travis-ci.org/<%= ghName %>/<%= registryName %>)
 
-> Awesome.
+> <%= description %>
 
 
 ## Installation
