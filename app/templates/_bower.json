@@ -1,6 +1,7 @@
 {
   "name": "<%= registryName %>",
   "version": "0.0.1",
+  "description": "<%= description %>",
   "homepage": "https://github.com/<%= ghName %>/<%= registryName %>",
   "license": "MIT",
   "main": [
